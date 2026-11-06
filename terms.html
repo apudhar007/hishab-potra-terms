@@ -4,92 +4,400 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
-  <title>Terms of Service - Hishab Potro</title>
+  <meta name="theme-color" content="#102a43">
   <meta name="description" content="Terms of Service for Hishab Potro, an accounting and due-management application by Apdroid System.">
+  <title>Terms of Service | Hishab Potro</title>
   <style>
-    :root { color-scheme: light; --ink:#202733; --muted:#596579; --line:#e4e8ef; --accent:#2457a7; --bg:#f6f8fb; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
-    main { max-width:860px; margin:40px auto; padding:42px 48px; background:#fff; border:1px solid var(--line); border-radius:16px; }
-    h1 { margin:0 0 8px; font-size:2rem; line-height:1.2; }
-    .subtitle,.meta { color:var(--muted); }
-    .meta { margin:18px 0 28px; font-size:.95rem; }
-    h2 { margin:30px 0 8px; font-size:1.2rem; line-height:1.35; }
-    p { margin:8px 0 12px; }
-    ul { padding-left:24px; }
-    li { margin:6px 0; }
-    a { color:var(--accent); overflow-wrap:anywhere; }
-    footer { margin-top:36px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; }
-    @media (max-width:640px) { main { margin:0; padding:26px 20px; border:0; border-radius:0; } h1 { font-size:1.7rem; } }
+    :root {
+      color-scheme: light;
+      --navy: #102a43;
+      --navy-2: #183b56;
+      --blue: #2563eb;
+      --blue-soft: #eff6ff;
+      --ink: #243447;
+      --muted: #62748a;
+      --line: #e5edf5;
+      --page: #f4f7fb;
+      --white: #fff;
+      --shadow: 0 18px 55px rgba(16, 42, 67, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font: 16px/1.75 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar {
+      background: var(--navy);
+      color: #d9e8f5;
+      padding: 14px 22px;
+    }
+    .topbar-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 750;
+      letter-spacing: .02em;
+    }
+    .brand small {
+      display: block;
+      color: #a9c2d8;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .top-link {
+      color: #d9e8f5;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .page {
+      max-width: 1040px;
+      margin: 42px auto 64px;
+      padding: 0 22px;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 46px 38px;
+      border-radius: 22px 22px 0 0;
+      color: #fff;
+      background: linear-gradient(125deg, var(--navy) 0%, var(--navy-2) 58%, #245b79 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -75px;
+      top: -115px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 50%;
+      box-shadow: 0 0 0 30px rgba(255,255,255,.035), 0 0 0 65px rgba(255,255,255,.025);
+      pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      color: #b9d8f2;
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: #69b7ee;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 46px);
+      line-height: 1.13;
+      letter-spacing: -.035em;
+    }
+    .product-name {
+      margin: 10px 0 0;
+      color: #d4e6f5;
+      font-size: 18px;
+      font-weight: 550;
+    }
+    .hero-note {
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: #c4d7e7;
+      font-size: 14px;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.17);
+    }
+    .meta-item { color: #c4d7e7; font-size: 13px; }
+    .meta-item strong {
+      display: block;
+      margin-bottom: 2px;
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .document {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 42px;
+      padding: 38px 46px 46px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 0;
+      border-radius: 0 0 22px 22px;
+      box-shadow: var(--shadow);
+    }
+    .contents {
+      align-self: start;
+      position: sticky;
+      top: 22px;
+      padding: 18px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfdff;
+    }
+    .contents h2 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .contents ol {
+      margin: 0;
+      padding-left: 18px;
+      color: #8a9aab;
+      font-size: 12px;
+    }
+    .contents li { margin: 7px 0; padding-left: 2px; }
+    .contents a { color: #53677d; }
+    .contents a:hover { color: var(--blue); }
+    .content { min-width: 0; }
+    .intro {
+      margin: 0 0 28px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+      background: var(--blue-soft);
+      color: #344d68;
+      font-size: 14px;
+    }
+    section {
+      padding: 0 0 24px;
+      margin: 0 0 24px;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 24px;
+    }
+    section:last-of-type { border-bottom: 0; margin-bottom: 0; }
+    section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 19px;
+      line-height: 1.4;
+      letter-spacing: -.015em;
+    }
+    .number {
+      flex: 0 0 auto;
+      color: #8aa3ba;
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .08em;
+    }
+    p { margin: 8px 0 12px; }
+    ul { margin: 10px 0 12px; padding-left: 22px; }
+    li { margin: 7px 0; padding-left: 3px; }
+    li::marker { color: #8ba8c2; }
+    .contact-card {
+      margin-top: 14px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fbfdff;
+    }
+    .contact-card strong { color: var(--navy); }
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 24px;
+      padding: 20px 4px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .footer strong { color: var(--navy); }
+    @media (max-width: 760px) {
+      .page { margin: 22px auto 40px; padding: 0 14px; }
+      .hero { padding: 32px 25px 28px; border-radius: 17px 17px 0 0; }
+      .document {
+        display: block;
+        padding: 25px 25px 30px;
+        border-radius: 0 0 17px 17px;
+      }
+      .contents { position: static; margin-bottom: 30px; }
+      .contents ol { columns: 2; column-gap: 24px; }
+      .contents li { break-inside: avoid; }
+      .topbar { padding: 12px 16px; }
+    }
+    @media (max-width: 420px) {
+      body { font-size: 15px; }
+      .hero { padding: 28px 20px 24px; }
+      .document { padding: 22px 19px 26px; }
+      .contents ol { columns: 1; }
+      .meta-row { gap: 12px 20px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .topbar, .contents { display: none; }
+      .page { max-width: none; margin: 0; padding: 0; }
+      .hero { border-radius: 0; print-color-adjust: exact; }
+      .document { display: block; padding: 28px; border: 0; box-shadow: none; }
+      .footer { margin-top: 12px; }
+      a { color: inherit; text-decoration: none; }
+    }
   </style>
 </head>
 <body>
-<main>
-  <h1>Terms of Service</h1>
-  <div class="subtitle">Hishab Potro – হিসাব পত্র</div>
-  <div class="meta"><strong>Effective date:</strong> 6 November 2026<br>
-  <strong>Developer:</strong> Apdroid System (independent developer)</div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">APDROID SYSTEM<small>Application documentation</small></div>
+      <a class="top-link" href="mailto:apdroidsystem.dev@gmail.com">Contact support ↗</a>
+    </div>
+  </header>
 
-  <p>These Terms of Service (“Terms”) govern your access to and use of the Hishab Potro mobile application (“App”), provided by Apdroid System (“we”, “us” or “our”). By installing or using the App, you agree to these Terms. If you do not agree, do not use the App.</p>
+  <main class="page">
+    <div class="hero">
+      <div class="eyebrow">Legal information</div>
+      <h1>Terms of Service</h1>
+      <p class="product-name">Hishab Potro – হিসাব পত্র</p>
+      <p class="hero-note">Please read these terms carefully before using Hishab Potro.</p>
+      <div class="meta-row">
+        <div class="meta-item"><strong>Effective date</strong>6 November 2026</div>
+        <div class="meta-item"><strong>Developer</strong>Apdroid System · Independent developer</div>
+        <div class="meta-item"><strong>Minimum age</strong>18 years</div>
+      </div>
+    </div>
 
-  <h2>1. About the App</h2>
-  <p>Hishab Potro is a record-keeping and business account-management tool. Depending on the version and features available, it may help you manage customers and suppliers, record amounts due and payments, create cash memos, review transaction history, and send reminders using supported sharing or messaging options.</p>
-  <p>The App is a tool for recording and organizing information. It is not a bank, payment processor, accounting firm, tax adviser, legal adviser, or financial institution. We do not hold, transfer, collect, or settle money on your behalf through the App unless a feature explicitly states otherwise.</p>
+    <div class="document">
+      <aside class="contents" aria-label="Table of contents">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#about">About the App</a></li>
+          <li><a href="#eligibility">Eligibility</a></li>
+          <li><a href="#records">Your records</a></li>
+          <li><a href="#calculations">Calculation outcomes</a></li>
+          <li><a href="#backups">Data and backups</a></li>
+          <li><a href="#accounts">Accounts and deletion</a></li>
+          <li><a href="#third-parties">Ads and third parties</a></li>
+          <li><a href="#acceptable-use">Acceptable use</a></li>
+          <li><a href="#changes">App changes</a></li>
+          <li><a href="#liability">Disclaimer</a></li>
+          <li><a href="#termination">Termination</a></li>
+          <li><a href="#law">Governing law</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </aside>
 
-  <h2>2. Eligibility</h2>
-  <p>You must be at least 18 years old to use the App. By using it, you confirm that you meet this age requirement and have the legal capacity to agree to these Terms.</p>
+      <article class="content">
+        <p class="intro">These Terms of Service (“Terms”) govern your access to and use of the Hishab Potro mobile application (“App”), provided by Apdroid System (“we”, “us” or “our”). By installing or using the App, you agree to these Terms. If you do not agree, do not use the App.</p>
 
-  <h2>3. Your records and responsibilities</h2>
-  <ul>
-    <li>You are responsible for entering, checking, correcting, and maintaining your own business records, customer and supplier details, balances, payments, and cash memos.</li>
-    <li>You are responsible for verifying calculations and records before relying on them for business, tax, legal, or other decisions.</li>
-    <li>You should keep receipts and other source documents where appropriate. The App does not replace your own accounting controls or professional advice.</li>
-    <li>You are responsible for obtaining any permissions or lawful basis needed to store or use another person's information, and for complying with applicable privacy, consumer, tax, and business laws.</li>
-    <li>Do not use the App for unlawful, fraudulent, misleading, abusive, or unauthorized activities.</li>
-  </ul>
+        <section id="about">
+          <h2><span class="number">01</span> About the App</h2>
+          <p>Hishab Potro is a record-keeping and business account-management tool. Depending on the version and features available, it may help you manage customers and suppliers, record amounts due and payments, create cash memos, review transaction history, and send reminders using supported sharing or messaging options.</p>
+          <p>The App is a tool for recording and organizing information. It is not a bank, payment processor, accounting firm, tax adviser, legal adviser, or financial institution. We do not hold, transfer, collect, or settle money on your behalf through the App unless a feature explicitly states otherwise.</p>
+        </section>
 
-  <h2>4. No guarantee of accounting or calculation outcomes</h2>
-  <p>Although we aim to make the App useful and reliable, we do not guarantee that every entry, calculation, report, reminder, export, or displayed balance will be error-free, complete, or suitable for your particular business needs. You must independently check important figures and retain your own supporting records.</p>
-  <p>Information in the App is not professional accounting, tax, financial, or legal advice. Consult a qualified professional when you need such advice.</p>
+        <section id="eligibility">
+          <h2><span class="number">02</span> Eligibility</h2>
+          <p>You must be at least 18 years old to use the App. By using it, you confirm that you meet this age requirement and have the legal capacity to agree to these Terms.</p>
+        </section>
 
-  <h2>5. Data, backups, and device responsibility</h2>
-  <p>Some App records may be stored locally on your device. If you use available backup features, backup data may be stored in a location or service you select, such as your Google Drive account. Backup availability, restoration, and retention may depend on your device, account, settings, connectivity, and the relevant third-party service.</p>
-  <p>You are responsible for keeping your device and accounts secure and for making and checking backups when needed. Uninstalling the App, losing or damaging your device, clearing App data, changing accounts, or a failed or incomplete backup may result in loss of records. We cannot guarantee that lost or deleted data can be recovered.</p>
+        <section id="records">
+          <h2><span class="number">03</span> Your records and responsibilities</h2>
+          <ul>
+            <li>You are responsible for entering, checking, correcting, and maintaining your own business records, customer and supplier details, balances, payments, and cash memos.</li>
+            <li>You are responsible for verifying calculations and records before relying on them for business, tax, legal, or other decisions.</li>
+            <li>You should keep receipts and other source documents where appropriate. The App does not replace your own accounting controls or professional advice.</li>
+            <li>You are responsible for obtaining any permissions or lawful basis needed to store or use another person's information, and for complying with applicable privacy, consumer, tax, and business laws.</li>
+            <li>Do not use the App for unlawful, fraudulent, misleading, abusive, or unauthorized activities.</li>
+          </ul>
+        </section>
 
-  <h2>6. Accounts and account deletion</h2>
-  <p>If the App offers sign-in or account-related features, you are responsible for maintaining the security of your sign-in credentials and for activity carried out through your account.</p>
-  <p>You may request deletion through the App's available account-deletion option (where available) or by emailing <a href="mailto:psdhar007@gmail.com">psdhar007@gmail.com</a> with the subject “Hishab Potro - Account Deletion Request”. The App's locally stored business records may remain on your device unless you delete them yourself. Backup copies held in a third-party account may need to be managed separately by you, subject to that provider's tools and policies.</p>
+        <section id="calculations">
+          <h2><span class="number">04</span> No guarantee of accounting or calculation outcomes</h2>
+          <p>Although we aim to make the App useful and reliable, we do not guarantee that every entry, calculation, report, reminder, export, or displayed balance will be error-free, complete, or suitable for your particular business needs. You must independently check important figures and retain your own supporting records.</p>
+          <p>Information in the App is not professional accounting, tax, financial, or legal advice. Consult a qualified professional when you need such advice.</p>
+        </section>
 
-  <h2>7. Advertisements and third-party services</h2>
-  <p>The App is provided free of charge and may display advertisements, including advertisements served by Google AdMob. Advertising content, measurement, and related data practices may be governed by the advertising provider's own terms and privacy policy.</p>
-  <p>The App may also work with third-party services or applications, such as Google Sign-In, Google Drive, SMS, WhatsApp, or other sharing and messaging apps, depending on the features you use and the apps installed on your device. Those services are provided by their respective providers and are subject to their own terms and privacy policies. We do not control third-party services and are not responsible for their availability, content, or actions.</p>
+        <section id="backups">
+          <h2><span class="number">05</span> Data, backups, and device responsibility</h2>
+          <p>Some App records may be stored locally on your device. If you use available backup features, backup data may be stored in a location or service you select, such as your Google Drive account. Backup availability, restoration, and retention may depend on your device, account, settings, connectivity, and the relevant third-party service.</p>
+          <p>You are responsible for keeping your device and accounts secure and for making and checking backups when needed. Uninstalling the App, losing or damaging your device, clearing App data, changing accounts, or a failed or incomplete backup may result in loss of records. We cannot guarantee that lost or deleted data can be recovered.</p>
+        </section>
 
-  <h2>8. Acceptable use</h2>
-  <p>You must not misuse the App, attempt to disrupt or compromise its operation or security, reverse engineer or modify it except where applicable law permits, use it to infringe another person's rights, or use it in a way that violates applicable law or these Terms.</p>
+        <section id="accounts">
+          <h2><span class="number">06</span> Accounts and account deletion</h2>
+          <p>If the App offers sign-in or account-related features, you are responsible for maintaining the security of your sign-in credentials and for activity carried out through your account.</p>
+          <p>You may request deletion through the App's available account-deletion option (where available) or by emailing <a href="mailto:psdhar007@gmail.com">psdhar007@gmail.com</a> with the subject “Hishab Potro - Account Deletion Request”. The App's locally stored business records may remain on your device unless you delete them yourself. Backup copies held in a third-party account may need to be managed separately by you, subject to that provider's tools and policies.</p>
+        </section>
 
-  <h2>9. App availability and changes</h2>
-  <p>We may update, modify, suspend, or discontinue all or part of the App, including features, from time to time. We do not promise that the App or any particular feature will always be available, uninterrupted, or compatible with every device or operating-system version.</p>
-  <p>We may update these Terms when necessary. We will publish the revised Terms on this page and update the effective date. Your continued use of the App after revised Terms take effect means you accept the updated Terms, to the extent permitted by applicable law.</p>
+        <section id="third-parties">
+          <h2><span class="number">07</span> Advertisements and third-party services</h2>
+          <p>The App is provided free of charge and may display advertisements, including advertisements served by Google AdMob. Advertising content, measurement, and related data practices may be governed by the advertising provider's own terms and privacy policy.</p>
+          <p>The App may also work with third-party services or applications, such as Google Sign-In, Google Drive, SMS, WhatsApp, or other sharing and messaging apps, depending on the features you use and the apps installed on your device. Those services are provided by their respective providers and are subject to their own terms and privacy policies. We do not control third-party services and are not responsible for their availability, content, or actions.</p>
+        </section>
 
-  <h2>10. Disclaimer and limitation of liability</h2>
-  <p>To the maximum extent permitted by applicable law, the App is provided “as is” and “as available”, without warranties or guarantees of any kind, whether express or implied. We do not warrant that the App will meet every requirement, operate without interruption, or prevent loss or corruption of data.</p>
-  <p>To the maximum extent permitted by applicable law, Apdroid System will not be liable for indirect, incidental, special, consequential, or punitive loss, or for loss of profits, business, goodwill, data, or business opportunities arising from or related to your use of, or inability to use, the App. Nothing in these Terms excludes or limits liability that cannot legally be excluded or limited under applicable law.</p>
+        <section id="acceptable-use">
+          <h2><span class="number">08</span> Acceptable use</h2>
+          <p>You must not misuse the App, attempt to disrupt or compromise its operation or security, reverse engineer or modify it except where applicable law permits, use it to infringe another person's rights, or use it in a way that violates applicable law or these Terms.</p>
+        </section>
 
-  <h2>11. Suspension or termination</h2>
-  <p>You may stop using the App at any time by uninstalling it. We may suspend or restrict access to the App or its features where reasonably necessary to protect the App, users, or our services, address misuse, comply with law, or discontinue the App. Any provisions that by their nature should continue after use ends will remain effective.</p>
+        <section id="changes">
+          <h2><span class="number">09</span> App availability and changes</h2>
+          <p>We may update, modify, suspend, or discontinue all or part of the App, including features, from time to time. We do not promise that the App or any particular feature will always be available, uninterrupted, or compatible with every device or operating-system version.</p>
+          <p>We may update these Terms when necessary. We will publish the revised Terms on this page and update the effective date. Your continued use of the App after revised Terms take effect means you accept the updated Terms, to the extent permitted by applicable law.</p>
+        </section>
 
-  <h2>12. Governing law</h2>
-  <p>These Terms are governed by the laws of Bangladesh, without regard to conflict-of-law principles, subject to any mandatory consumer-protection rights or other protections that apply to you under the laws of your country or region.</p>
+        <section id="liability">
+          <h2><span class="number">10</span> Disclaimer and limitation of liability</h2>
+          <p>To the maximum extent permitted by applicable law, the App is provided “as is” and “as available”, without warranties or guarantees of any kind, whether express or implied. We do not warrant that the App will meet every requirement, operate without interruption, or prevent loss or corruption of data.</p>
+          <p>To the maximum extent permitted by applicable law, Apdroid System will not be liable for indirect, incidental, special, consequential, or punitive loss, or for loss of profits, business, goodwill, data, or business opportunities arising from or related to your use of, or inability to use, the App. Nothing in these Terms excludes or limits liability that cannot legally be excluded or limited under applicable law.</p>
+        </section>
 
-  <h2>13. Contact</h2>
-  <p>For questions about these Terms or the App, contact:</p>
-  <p><strong>Apdroid System</strong> (independent developer)<br>
-  Support: <a href="mailto:apdroidsystem.dev@gmail.com">apdroidsystem.dev@gmail.com</a><br>
-  Account deletion: <a href="mailto:psdhar007@gmail.com">psdhar007@gmail.com</a></p>
+        <section id="termination">
+          <h2><span class="number">11</span> Suspension or termination</h2>
+          <p>You may stop using the App at any time by uninstalling it. We may suspend or restrict access to the App or its features where reasonably necessary to protect the App, users, or our services, address misuse, comply with law, or discontinue the App. Any provisions that by their nature should continue after use ends will remain effective.</p>
+        </section>
 
-  <footer>
-    This page contains the Terms of Service for Hishab Potro – হিসাব পত্র. It is a general-use document and is not a substitute for advice from a lawyer familiar with the laws and markets where the App is distributed.
-  </footer>
-</main>
+        <section id="law">
+          <h2><span class="number">12</span> Governing law</h2>
+          <p>These Terms are governed by the laws of Bangladesh, without regard to conflict-of-law principles, subject to any mandatory consumer-protection rights or other protections that apply to you under the laws of your country or region.</p>
+        </section>
+
+        <section id="contact">
+          <h2><span class="number">13</span> Contact</h2>
+          <p>For questions about these Terms or the App, contact:</p>
+          <div class="contact-card">
+            <strong>Apdroid System</strong> <span style="color:#62748a">(independent developer)</span><br>
+            Support: <a href="mailto:apdroidsystem.dev@gmail.com">apdroidsystem.dev@gmail.com</a><br>
+            Account deletion: <a href="mailto:psdhar007@gmail.com">psdhar007@gmail.com</a>
+          </div>
+        </section>
+
+        <div class="footer">
+          <span><strong>Hishab Potro – হিসাব পত্র</strong></span>
+          <span>© 2026 Apdroid System · Terms of Service</span>
+        </div>
+      </article>
+    </div>
+  </main>
 </body>
 </html>
